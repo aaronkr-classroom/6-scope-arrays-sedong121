@@ -20,10 +20,10 @@ int main(void) {
 	char result[100];
 	
 	printf("Result: (0)", result);
-	strcpy_s(result, strlen(result), data2); // result = "abc";
+	strcpy_s(result, sizeof(result), data2); // result = "abc";
 	printf("Result: (cpy)", result);
-	strcat_s(result, strlen(result+strlen("def")), "def"); // result = "abcdef";
+	strcat_s(result, sizeof(result+strlen("def")), "def"); // result = "abcdef";
 	printf("Result: (cat)", result);
 
-	return 0;
+	return 0; 
 }
